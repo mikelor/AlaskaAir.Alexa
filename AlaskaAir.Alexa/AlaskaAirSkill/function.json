@@ -1,0 +1,18 @@
+{
+  "disabled": false,
+  "scriptFile": "..\\bin\\AlaskaAir.Alexa.dll",
+  "entryPoint": "AlaskaAir.Alexa.AlaskaAirSkill.FunctionHandler.Run",
+  "bindings": [
+    {
+      "authLevel": "function",
+      "name": "req",
+      "type": "httpTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "$return",
+      "type": "http",
+      "direction": "out"
+    }
+  ]
+}
