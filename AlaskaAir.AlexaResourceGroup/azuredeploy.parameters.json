@@ -4,6 +4,9 @@
   "parameters": {
     "appName": {
       "value": "as-alaskaairalexa"
+    },
+    "sourceCodeRepositoryURL": {
+      "value": "https://github.com/mikelor/AlaskaAir.Alexa"
     }
   }
 }
