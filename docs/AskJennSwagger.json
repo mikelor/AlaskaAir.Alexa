@@ -1,0 +1,125 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "The AskJenn API",
+    "version": "1.0.0",
+    "title": "AskJenn",
+    "termsOfService": "http://www.alaskaair.com/",
+    "contact": {
+      "email": "mike.lorengo@alaskaair.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "askjenn.alaskaair.com",
+  "basePath": "/AlmeApi/api",
+  "tags": [
+    {
+      "name": "conversation",
+      "description": "Have a conversation with Jenn",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "http://swagger.io"
+      }
+    }
+  ],
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/Conversation/converse": {
+      "post": {
+        "tags": [
+          "conversation"
+        ],
+        "summary": "submit a query to Jenn",
+        "description": "",
+        "operationId": "addConversation",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Query for Jenn",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Conversation"
+            }
+          }
+        ],
+        "responses": {
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Conversation": {
+      "type": "object",
+      "required": [
+        "name",
+        "photoUrls"
+      ],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string",
+          "example": "doggie"
+        },
+        "photoUrls": {
+          "type": "array",
+          "xml": {
+            "name": "photoUrl",
+            "wrapped": true
+          },
+          "items": {
+            "type": "string"
+          }
+        },
+        "status": {
+          "type": "string",
+          "description": "pet status in the store",
+          "enum": [
+            "available",
+            "pending",
+            "sold"
+          ]
+        }
+      },
+      "xml": {
+        "name": "Pet"
+      }
+    },
+    "ApiResponse": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "type": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}
