@@ -1,0 +1,26 @@
+URL: https://askjenn.alaskaair.com/AlmeApi/api/Conversation/converse
+{"question":"where about bag fees","origin":"Typed","parameters":{},"channel":"Alexa"}
+
+Request:
+{ connection: 'keep-alive',
+  'content-length': '707',
+  'content-type': 'application/json; charset=utf-8',
+  accept: 'application/json',
+  'accept-charset': 'utf-8',
+  host: 'as-alexa-alaskaair-662ykhdrpzmom.azurewebsites.net',
+  'max-forwards': '10',
+  'user-agent': 'Apache-HttpClient/UNAVAILABLE (Java/1.8.0_112)',
+  signature: 'KWspxPYm7aPStxQfdy0cqVE/aRT//K5MTVeykgt4kAaz4/RSUgbVUjuVlonL1j90B8fYmAVtk1WHYa0846V3djjQ2yxhcAcCBz4lA6/31BT67oeknu8nYIzGAPXklu6fP1AtP6TEbqjMabvyDhpy8+AkbJbZ74oqu5G92d55zSI7i51oclJKq7FeG/8ibJkKFqXSeTuInxsinAkvyqOBLZegYuuEJogh5YBGJFX03tt5P1uZkIn3vWt0CKSYNWozQCCr8iXH/yld71VZ2g47JiT1K+6qESYRCZwOv0iP2BS5yKR+RZJp6x7oCIxTtYlJXHDiPJ8S5/tIOTtSxOlDrw==',
+  signaturecertchainurl: 'https://s3.amazonaws.com/echo.api/echo-api-cert-4.pem',
+  'x-liveupgrade': '1',
+  'x-original-url': '/api/alaska-agent',
+  'x-arr-log-id': '2766809c-997d-448b-8f76-49b1e9b029a0',
+  'disguised-host': 'as-alexa-alaskaair-662ykhdrpzmom.azurewebsites.net',
+  'x-site-deployment-id': 'as-alexa-alaskaair-662ykhdrpzmom',
+  'was-default-hostname': 'as-alexa-alaskaair-662ykhdrpzmom.azurewebsites.net',
+  'x-forwarded-for': '72.21.217.178:28213',
+  'x-arr-ssl': '2048|256|C=US, S=Washington, L=Redmond, O=Microsoft Corporation, OU=Microsoft IT, CN=Microsoft IT SSL SHA2|CN=*.azurewebsites.net' }
+{"version":"1.0","session":{"new":false,"sessionId":"SessionId.fb42527a-9c05-4653-9b72-144a93bf81fd","application":{"applicationId":"amzn1.ask.skill.50cae8cf-d04b-467f-96c0-80c9db6d0256"},"attributes":{},"user":{"userId":"amzn1.ask.account.AH2WIYXPKLHCE46RT6Q67ZXTVLS55IM2E3EE5W5TCDKLFPOACMQU4TPQQSSQTNNEFDCYBNQE5ZKUUJLW4PUT7GALJBYABQO6LKBEBTKHFNL7AXPTRE43TXJP5NI6KC57RTUB3FK5DWDKUIN7XMYZ7OXAIRPK6ZLXJPPRZ6E2O6AR3RKSDRBK6TUQVKEYBH6ZCTBU4KXXEADKD6Q"}},"request":{"type":"IntentRequest","requestId":"EdwRequestId.eb0b5146-3fd1-4bd3-a9c1-7009b370d412","timestamp":"2017-04-23T20:24:44Z","locale":"en-US","intent":{"name":"AskJennIntent","slots":{"Question":{"name":"Question","value":"what about bag fees"}}}}}
+
+Response:
+{"text":"Our checked baggage fee for the first and second bag is $25 each, and $75 for each additional bag. Bags must weigh 50 pounds or less and have a maximum dimension of 62 linear inches (length + height + width.) Some travelers qualify to have this fee waived, to learn more review the graph here.","responseId":"00000000-0000-0000-0000-000000000000","responseRevision":2,"unitId":"00000000-0000-0000-0000-000000000000","displayLinkSections":null,"fold":3,"headerText":"Here's more:","displayLinks":[{"DisplayText":"Baggage Fee Waivers and Exceptions","TargetType":"Url","SectionID":0,"Metadata":{"DisplayStyle":"Default","NavigationType":"MainPage","Source":{"Origin":"responseset","UID":"679fd377-c77f-4780-b998-4e50e7af8b53"},"UrlAddress":"https://www.alaskaair.com/content/travel-info/baggage/baggage-fee-waivers-exceptions.aspx","UrlUID":"ecb07d64-700a-4c05-a995-374654c9816c"}},{"DisplayText":"Optional Services and Fees","TargetType":"Url","SectionID":0,"Metadata":{"DisplayStyle":"Default","NavigationType":"MainPage","Source":{"Origin":"responseset","UID":"679fd377-c77f-4780-b998-4e50e7af8b53"},"UrlAddress":"https://www.alaskaair.com/content/travel-info/optional-services-fees.aspx?lid=JennWindow::ResponseLink","UrlUID":"794ca52a-8c59-47f3-ad59-158273550922"}},{"DisplayText":"Paying Fees at Check-In","TargetType":"Unit","SectionID":0,"Metadata":{"DisplayStyle":"Standard","Source":{"Origin":"responseset","UID":"679fd377-c77f-4780-b998-4e50e7af8b53"},"UnitSourceType":"RelatedLink","UnitUID":"21a5dd31-332b-4246-9991-4a1cbe2e51f1"}}],"displayLinkMetadata":{"Section":[{"Fold":{"LinkText":"More >","Location":"3"},"HeaderText":"Here's More:"}]},"navUrl":{"AutoNavigationType":"MainPage","DisplayText":"View Page","LinkNavigationType":"MainPage","UrlAddress":"https://www.alaskaair.com/content/travel-info/baggage/checked-bags.aspx?lid=JennWindow::ResponseLink","UrlUID":null},"responseActions":[{"Name":"InlineSurvey","Show":"true"},{"Name":"EntryId","Value":"f86e6a20-6ca4-4251-a0c4-0bebbe4143b7"},{"Name":"TTSResponseAction","Position":"Before","Metadata":{"TTSMediaHandlerInstanceID":"NextIT.AlmeServer.TtsPlugin","TTSFileID":"pr_Checked Baggage Sizes and Charges_10_10_2014.mp3","TTSMimeTypes":["application/x-shockwave-flash","audio/mpeg","audio/wav"]}}],"deferredAppCall":null,"userDisplayName":"You: ","agentDisplayName":"Alme: ","maskedInput":"what about bag fees","maintainUiLock":false,"userId":"24f24d8e-e137-4b97-84cf-5f8c3af37876","messageId":"00000000-0000-0000-0000-000000000000","channel":null}

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26403.0
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlaskaAir.Alexa", "AlaskaAir.Alexa\AlaskaAir.Alexa.csproj", "{B73C9E1D-5FAA-4EFD-ACF7-DDE76A58B096}"
 EndProject
@@ -9,6 +9,7 @@ Project("{151D2E53-A2C4-4D7D-83FE-D05416EBD58E}") = "AlaskaAir.AlexaResourceGrou
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{5D8BC096-2BBA-4D6F-97CC-937D5CAB4EA7}"
 	ProjectSection(SolutionItems) = preProject
+		AskJennInteraction.txt = AskJennInteraction.txt
 		docs\AskJennSwagger.json = docs\AskJennSwagger.json
 	EndProjectSection
 EndProject
