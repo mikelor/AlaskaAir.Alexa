@@ -7,6 +7,9 @@ using AlexaSkillsKit.Speechlet;
 using AlexaSkillsKit.UI;
 using AlexaSkillsKit.Slu;
 
+using AlmeApiSdk;
+using AlmeApiSdk.Models.Conversation.Converse;
+
 namespace AlaskaAir.Alexa.AlaskaAirSkill
 {
     public class AlaskaAirSpeechlet : SpeechletAsync
@@ -94,7 +97,20 @@ namespace AlaskaAir.Alexa.AlaskaAirSkill
         private async Task<SpeechletResponse> BuildHelloWorldResponseAsync(Intent intent, Session session)
         {
             string speechOutput = "What up, dude? Do you know how much Mike Rocks?";
-            return await BuildSpeechletResponseAsync(intent.Name, speechOutput, false);
+
+            var almeClient = new AlmeClient(new Uri("https://askjenn.alaskaair.com/"));
+
+            // Setup the request
+            ConverseRequest req = new ConverseRequest();
+            req.channel = "Console";
+            req.origin = "Typed";
+            req.parameters = new ConverseRequestParameters();
+            req.question = "What about bag fees";
+
+            // Call the Converse endpoint
+            var res = await almeClient.ConverseAsync(req);
+
+            return await BuildSpeechletResponseAsync(intent.Name, res.text, false);
         }
     }
     #endregion
