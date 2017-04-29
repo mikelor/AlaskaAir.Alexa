@@ -53,11 +53,10 @@ namespace AlaskaAir.Alexa.AlaskaAirSkill
 
             // Note: If the session is started with an intent, no welcome message will be rendered;
             // rather, the intent specific response will be returned.
-
             switch (intentName)
             {
-                case "HelloWorldIntent":
-                    return await BuildHelloWorldResponseAsync(intent, session);
+                case "AskJennIntent":
+                    return await BuildAskJennResponseAsync(intent, session);
                 default:
                     throw new SpeechletException("Invalid Intent");
             }
@@ -94,9 +93,9 @@ namespace AlaskaAir.Alexa.AlaskaAirSkill
             return response;
         }
 
-        private async Task<SpeechletResponse> BuildHelloWorldResponseAsync(Intent intent, Session session)
+        private async Task<SpeechletResponse> BuildAskJennResponseAsync(Intent intent, Session session)
         {
-            string speechOutput = "What up, dude? Do you know how much Mike Rocks?";
+        
 
             var almeClient = new AlmeClient(new Uri("https://askjenn.alaskaair.com/"));
 
@@ -105,7 +104,10 @@ namespace AlaskaAir.Alexa.AlaskaAirSkill
             req.channel = "Console";
             req.origin = "Typed";
             req.parameters = new ConverseRequestParameters();
-            req.question = "What about bag fees";
+
+            Slot question = intent.Slots["Question"];
+            Logger.Info($"Question={question.Value.ToString()}");
+            req.question = question.Value.ToString();
 
             // Call the Converse endpoint
             var res = await almeClient.ConverseAsync(req);

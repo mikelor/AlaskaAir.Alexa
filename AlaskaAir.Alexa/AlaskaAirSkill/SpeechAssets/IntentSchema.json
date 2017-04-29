@@ -1,7 +1,21 @@
 {
   "intents": [
     {
-      "intent": "HelloWorldIntent"
+      "slots": [
+        {
+          "name": "Question",
+          "type": "LITERAL"
+        }
+      ],
+      "intent": "AskJennIntent"
+    },
+    {
+      "slots": [],
+      "intent": "GoodbyeAgent"
+    },
+    {
+      "slots": [],
+      "intent": "IntentAbout"
     }
   ]
 }

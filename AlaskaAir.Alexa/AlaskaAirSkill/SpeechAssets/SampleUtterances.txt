@@ -1,6 +1,10 @@
-HelloWorldIntent say hello
-HelloWorldIntent say hello world
-HelloWorldIntent Hello
-HelloWorldIntent say hi
-HelloWorldIntent hi
-HelloWorldIntent what's up
+AskJennIntent Ask Jenn {Who is|Question}
+AskJennIntent Ask Jenn {Who are|Question}
+AskJennIntent Ask Jenn {What is|Question}
+AskJennIntent Ask Jenn {What are|Question}
+AskJennIntent Ask Jenn {Where is|Question}
+AskJennIntent Ask Jenn {Where ar|Question}
+AskJennIntent Ask Jenn {How do|Question}
+AskJennIntent Ask Jenn {How many|Question}
+AskJennIntent Ask Jenn {How much|Question}
+AskJennIntent Ask Jenn {Do you|Question}
