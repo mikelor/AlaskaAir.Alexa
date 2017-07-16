@@ -58,7 +58,7 @@ namespace AlaskaAir.Alexa.AlaskaAirSkill
                 case "AskJennIntent":
                     return await BuildAskJennResponseAsync(intent, session);
                 case "FlightStatusIntent":
-                    return await BuildFlightStatusAsync(intent, session);
+                    return BuildFlightStatusAsync(intent, session);
                 default:
                     throw new SpeechletException("Invalid Intent");
             }
@@ -69,13 +69,13 @@ namespace AlaskaAir.Alexa.AlaskaAirSkill
         private async Task<SpeechletResponse> GetWelcomeResponseAsync()
         {
             // Create the welcome message.
-            string speechOutput =  "Say something like\nHi.\nHellow.\nHi Sir.";
+            string speechOutput =  "Welcome to the Alaska Airlines Ask Jenn Skill. Say something like AskJenn What about bag fees?";
 
             // Here we are setting shouldEndSession to false to not end the session and
             // prompt the user for input
-            return await BuildSpeechletResponseAsync("Welcome", speechOutput, false);
+            return  BuildSpeechletResponse("Welcome", speechOutput, false);
         }
-        private async Task<SpeechletResponse> BuildSpeechletResponseAsync(string title, string output, bool shouldEndSession)
+        private SpeechletResponse BuildSpeechletResponse(string title, string output, bool shouldEndSession)
         {
             // Create the Simple card content.
             SimpleCard card = new SimpleCard();
@@ -114,12 +114,12 @@ namespace AlaskaAir.Alexa.AlaskaAirSkill
             // Call the Converse endpoint
             var res = await almeClient.ConverseAsync(req);
 
-            return await BuildSpeechletResponseAsync(intent.Name, res.text, false);
+            return  BuildSpeechletResponse(intent.Name, res.text, false);
         }
 
-        private async Task<SpeechletResponse> BuildFlightStatusAsync(Intent intent, Session session)
+        private SpeechletResponse BuildFlightStatusAsync(Intent intent, Session session)
         {
-            return await BuildSpeechletResponseAsync(intent.Name, @"test", false);
+            return  BuildSpeechletResponse(intent.Name, @"test", false);
         }
     }
     #endregion
