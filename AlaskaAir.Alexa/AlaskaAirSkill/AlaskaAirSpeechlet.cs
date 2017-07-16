@@ -57,6 +57,8 @@ namespace AlaskaAir.Alexa.AlaskaAirSkill
             {
                 case "AskJennIntent":
                     return await BuildAskJennResponseAsync(intent, session);
+                case "FlightStatusIntent":
+                    return await BuildFlightStatusAsync(intent, session);
                 default:
                     throw new SpeechletException("Invalid Intent");
             }
@@ -113,6 +115,11 @@ namespace AlaskaAir.Alexa.AlaskaAirSkill
             var res = await almeClient.ConverseAsync(req);
 
             return await BuildSpeechletResponseAsync(intent.Name, res.text, false);
+        }
+
+        private async Task<SpeechletResponse> BuildFlightStatusAsync(Intent intent, Session session)
+        {
+            return await BuildSpeechletResponseAsync(intent.Name, @"test", false);
         }
     }
     #endregion
